@@ -6,7 +6,7 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [(await import('tailwindcss')).default, (await import('autoprefixer')).default],
-      base: import.meta.env.VITE_BASE_PATH || '/HorusApp',
+      base: process.env.VITE_BASE_PATH || '/HorusApp',
     }
   }
 })
